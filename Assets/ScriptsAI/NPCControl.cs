@@ -8,9 +8,10 @@ using System.Text;
 [RequireComponent(typeof(Rigidbody))]
 public class NPCControl : MonoBehaviour {
 
+
 	public GameObject player;
 	public Transform[] path;
-	public static float velocityFactor = 10.0f;
+	public static float velocityFactor = 2.0f;
 	private FSMSystem fsm;
 
 	public static float GetVelocityFactor(){
@@ -138,6 +139,7 @@ public class FollowPathState : FSMState
 
 public class ChasePlayerState : FSMState
 {
+
 	public ChasePlayerState()
 	{
 		stateID = StateID.ChasingPlayer;
@@ -146,7 +148,7 @@ public class ChasePlayerState : FSMState
 	public override void Reason(GameObject player, GameObject npc)
 	{
 		// If the player has gone 20 meters away from the NPC, fire LostPlayer transition
-		if (Vector3.Distance (npc.transform.position, player.transform.position) >= 30) {
+		if (Vector3.Distance (npc.transform.position, player.transform.position) >= 10) {
 			npc.GetComponent<NPCControl> ().SetTransition (Transition.LostPlayer);
 			Debug.Log("ChasePlayer: NAO ESTA VENDO O JOGADOR");
 		}
@@ -162,16 +164,18 @@ public class ChasePlayerState : FSMState
 		Vector3 moveDir = player.transform.position - npc.transform.position;
 		Debug.DrawRay(npc.transform.position,moveDir);
 		// Rotate towards the waypoint
-		npc.transform.rotation = Quaternion.Slerp(npc.transform.rotation,
-		                                          Quaternion.LookRotation(moveDir),
-		                                          5 * Time.deltaTime);
+        npc.transform.rotation = Quaternion.Slerp(npc.transform.rotation,
+                                                  Quaternion.LookRotation(moveDir),
+                                                  5 * Time.deltaTime);
 		npc.transform.eulerAngles = new Vector3(0, npc.transform.eulerAngles.y, 0);
 		
 		vel = moveDir.normalized * (NPCControl.GetVelocityFactor()*1.8f);//Aumenta 1.8x a velocidade do Dinossauro para correr atras do player
 		
 		// Apply the new Velocity
 		//npc.rigidbody.velocity = vel;
+
 		npc.GetComponent<Rigidbody>().velocity = vel;
+        //npc.GetComponent<NavMeshAgent>().destination = vel;
 	}
 	
 } // ChasePlayerState
