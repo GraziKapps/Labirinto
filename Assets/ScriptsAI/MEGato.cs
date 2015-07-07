@@ -50,7 +50,11 @@ public class MEGato : MonoBehaviour {
         /* Se ogro se afasta                                 */
         /*****************************************************/
 
+<<<<<<< HEAD
         if (Vector3.Distance(transform.position, Ogro.transform.position) > 4 && veOgro == true)
+=======
+        if (Vector3.Distance(transform.position, Ogro.transform.position) > 7 && veOgro == true)
+>>>>>>> d2f09d1e0a632a9c536cc599c06572e68b65673f
         {
 
             estado.Fugindo = false;

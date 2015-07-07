@@ -86,8 +86,13 @@ public class EstadoGato : MonoBehaviour {
         {
             AGato.NavMeshAgente.Resume(); // continua o caminho
 
+<<<<<<< HEAD
             AGato.NavMeshAgente.speed = 4;
             AGato.NavMeshAgente.acceleration = 4F;
+=======
+            AGato.NavMeshAgente.speed = 6;
+            AGato.NavMeshAgente.acceleration = 0.5F;
+>>>>>>> d2f09d1e0a632a9c536cc599c06572e68b65673f
 
             animacao.Play("Run"); // animação de correr
 
