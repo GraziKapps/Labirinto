@@ -39,7 +39,11 @@ public class MEDino : MonoBehaviour {
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, 20F))
         {
+<<<<<<< HEAD
             //Debug.Log("FollowPath: VENDO OBJETO - " + hit.transform.gameObject.ToString());
+=======
+            Debug.Log("FollowPath: VENDO OBJETO - " + hit.transform.gameObject.ToString());
+>>>>>>> 7b96ceb962d88bca7ede30535adaaa2572e2620e
 
             if (hit.transform.gameObject.tag == "Ogro")
             {

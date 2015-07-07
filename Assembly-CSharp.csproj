@@ -47,14 +47,37 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Allosaurus\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\DadosOgro.cs" />
      <Compile Include="Assets\Scripts\sOgro.cs" />
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d2f09d1e0a632a9c536cc599c06572e68b65673f
+>>>>>>> 7b96ceb962d88bca7ede30535adaaa2572e2620e
      <Compile Include="Assets\ScriptsAI\AEGato.cs" />
      <Compile Include="Assets\ScriptsAI\AEstrelaDinossauro.cs" />
      <Compile Include="Assets\ScriptsAI\EstadoDino.cs" />
      <Compile Include="Assets\ScriptsAI\EstadoGato.cs" />
      <Compile Include="Assets\ScriptsAI\MEDino.cs" />
      <Compile Include="Assets\ScriptsAI\MEGato.cs" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+     <Compile Include="Assets\ScriptsAI\AEstrelaDinossauro.cs" />
+     <Compile Include="Assets\ScriptsAI\AgentScript.cs" />
+     <Compile Include="Assets\ScriptsAI\EstadoDino.cs" />
+     <Compile Include="Assets\ScriptsAI\FSMSystem.cs" />
+     <Compile Include="Assets\ScriptsAI\MEDino.cs" />
+     <Compile Include="Assets\ScriptsAI\MaquinaEstados.cs" />
+     <Compile Include="Assets\ScriptsAI\NPCControl.cs" />
+     <Compile Include="Assets\ScriptsAI\WayPointAi.cs" />
+>>>>>>> 1b9270447642adda666c723648e6098531c88141
+>>>>>>> d2f09d1e0a632a9c536cc599c06572e68b65673f
+>>>>>>> 7b96ceb962d88bca7ede30535adaaa2572e2620e
      <None Include="Assets\Kitten\Shaders\Normal-Diffuse.shader" />
      <None Include="Assets\Kitten\Shaders\Alpha-Diffuse.shader" />
      <None Include="Assets\Monster\shaders\vertexAnim.shader" />
